@@ -65,14 +65,12 @@ npx playwright test
 npm run test:e2e
 ```
 
-## Contributing
+## Bonus Part
 
 ```
 Syed Ahmed (ahmedbokhari7@gmail.com)
 ```# front-end-assignment
 
-
-**### Bonus Part**
 
 For the given test cases, here's we can structure a traditional test plan and test cases that should be automated but can also be executed manually if needed:
 
