@@ -44,7 +44,7 @@ Please have the following installed.
 ### Installing
 
 ```
-[ git clone https://github.com/Syed-Ahmed-Ali-Bokhari/front-end-assignment](https://github.com/Syed-Ahmed-Ali-Bokhari/front-end-assignment.git)
+[ git clone https://github.com/Syed-Ahmed-Ali-Bokhari/front-end-assignment.git
 ```
 
 From the root directory, type -
