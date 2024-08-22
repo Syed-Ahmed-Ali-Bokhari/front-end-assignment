@@ -44,6 +44,5 @@ test.describe('@e2e1', () => {
     test('Logout Scenario', async ({ page, homePage }) => {
         await homePage.login(envCredentials.email, envCredentials.password); // Ensure login before logout
     });
-
- 
+    
 })
