@@ -19,14 +19,31 @@ test.describe('@e2e1', () => {
     })
     //test.use({storageState: 'context/adminContext.json'})
 
-    test.only('Login Scenario, Sorting Scenario, Add Product , Remove Product and Logout scenario', async ({page,homePage}) => {
-
-        await homePage.login(envCredentials.email, envCredentials.password)
-        await homePage.selectSortOption("Name (A to Z)")
-        await homePage.selectProductDynamically()
-        await homePage.addToCart()
-        await homePage.removeFromCart()
-    })
+      test('Login Scenario', async ({ page, homePage }) => {
+        await homePage.login(envCredentials.email, envCredentials.password);
+    });
+    
+    test('Sorting Scenario', async ({ page, homePage }) => {
+        await homePage.login(envCredentials.email, envCredentials.password); // Ensure login before sorting
+        await homePage.selectSortOption("Name (A to Z)");
+    });
+    
+    test('Add Product Scenario', async ({ page, homePage }) => {
+        await homePage.login(envCredentials.email, envCredentials.password); // Ensure login before adding product
+        await homePage.selectProductDynamically();
+        await homePage.addToCart();
+    });
+    
+    test('Remove Product Scenario', async ({ page, homePage }) => {
+        await homePage.login(envCredentials.email, envCredentials.password); // Ensure login before removing product
+        await homePage.selectProductDynamically();
+        await homePage.addToCart();
+        await homePage.removeFromCart();
+    });
+    
+    test('Logout Scenario', async ({ page, homePage }) => {
+        await homePage.login(envCredentials.email, envCredentials.password); // Ensure login before logout
+    });
 
  
 })
